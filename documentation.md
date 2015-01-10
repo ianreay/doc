@@ -3,7 +3,7 @@ Documentation
 
 I use a number of different types of documentation systems.
 
-* Markdown - personal docs
+* [Markdown](https://github.com/ianreay/doc/blob/master/documentation.md#Markdown) - personal docs
 * Latex - work docs
 * Sphinx with restructured text - python docs
 * Html - simple quick base proof of concept docs
@@ -20,11 +20,13 @@ I use markdown for any public facing content I generate. This is mostly because 
 Snippets
 -------------------------
 
-* page<tab> - create a new page
-* s<tab> - create a new section
-* ss<tab> - create a new sub section
-* sss<tab> - create a new sub sub section
-* il<tab> - internal link
-* el<tab> - external link
-* list<tab> - list start
-* li<tab> - list entry
+* page - create a new page
+* s - create a new section
+* ss - create a new sub section
+* sss - create a new sub sub section
+* il - internal link
+* el - external link
+* list - list start
+* li - list entry
+
+I use [ultisnips](https://github.com/SirVer/ultisnips) and the [vim](http://www.vim.org/) text editor to write docs with snippets
