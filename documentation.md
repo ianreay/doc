@@ -3,10 +3,9 @@ Documentation
 
 I use a number of different types of documentation systems.
 
-* [Markdown](../blob/master/documentation.md#Markdown) - personal docs
-* Latex - work docs
-* Sphinx with restructured text - python docs
-* Html - simple quick base proof of concept docs
+* [Markdown](https://github.com/ianreay/doc/blob/master/documentation.md#Markdown) - personal docs
+* [Latex](https://github.com/ianreay/doc/blob/master/documentation.md#Latex) - work docs
+* [Sphinx](https://github.com/ianreay/doc/blob/master/documenation.md#Sphinx) with restructured text - python docs
 
 Writing in all of these different formats can be a challenge. Using code snippets can really help in ensuring easy to type and consistently correct docs.
 
@@ -16,6 +15,28 @@ Markdown
 I use markdown for any public facing content I generate. This is mostly because it can be hosted in github and is easily available and maintained.
 
 [Markdown Syntax](http://daringfireball.net/projects/markdown/syntax)
+
+Latex
+--------------------------
+
+Latex is used for customer facing documentation since it allows for large
+ecosystems to be built around it that can remove out many repetitive tasks. 
+
+Pros:
+* Its hugely extensible.
+* Its a defacto standard that all doc tools tend to have a conversion from and to.
+
+Cons:
+* Its complex to setup.
+* Requires compilation phases.
+* Broken compiles can be difficult to troubleshoot.
+
+Sphinx
+--------------------------
+
+[Sphinx](http://sphinx-doc.org/) is the defacto documentation system for python and I use python a great deal at work.
+
+We use [Restructured Text](http://sphinx-doc.org/rest.html) when using sphinx.
 
 Snippets
 -------------------------
