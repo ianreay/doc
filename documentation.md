@@ -3,7 +3,7 @@ Documentation
 
 I use a number of different types of documentation systems.
 
-* [Markdown](https://github.com/ianreay/doc/blob/master/documentation.md#Markdown) - personal docs
+* [Markdown](../blob/master/documentation.md#Markdown) - personal docs
 * Latex - work docs
 * Sphinx with restructured text - python docs
 * Html - simple quick base proof of concept docs
@@ -20,6 +20,13 @@ I use markdown for any public facing content I generate. This is mostly because 
 Snippets
 -------------------------
 
+Each documentation system has different markup to express common concepts.
+Remembering all of this can be quite difficult since some documentation systems
+such as latex can be very markup heavy. For this reason, I use
+[snippets](http://en.wikipedia.org/wiki/Snippet_%28programming%29) to create
+common keystroke sequences that allow me to write documents far more
+efficiently and accuratly.
+
 * page - create a new page
 * s - create a new section
 * ss - create a new sub section
@@ -30,3 +37,16 @@ Snippets
 * li - list entry
 
 I use [ultisnips](https://github.com/SirVer/ultisnips) and the [vim](http://www.vim.org/) text editor to write docs with snippets
+
+Quick links:
+* [Personal vim setup](https://github.com/ianreay/dotfiles)
+* [Personal snippet repository](https://github.com/ianreay/ultisnips)
+
+Screencasts
+--------------------------
+
+For some great screencasts about how to use ultisnips with vim see:
+* [Meet ultisnips](http://vimcasts.org/episodes/meet-ultisnips/)
+* [Using python interpolation in ultisnips](http://vimcasts.org/episodes/ultisnips-python-interpolation/)
+* [Using selected text in Ultisnip snippets](http://vimcasts.org/episodes/ultisnips-visual-placeholder/)
+
