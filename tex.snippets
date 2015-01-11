@@ -1,0 +1,188 @@
+snippet input "Input a file" !b
+\input{${1:file}}
+endsnippet
+
+snippet label "label" !b
+\label{${1:label}}
+endsnippet
+
+snippet il "Internal link" 
+\ref{${1:label}}
+endsnippet
+
+snippet bi "itemed enumeration" 
+\BI
+\I ${1:item}
+\EI
+endsnippet
+
+snippet ni "Need info" 
+\NeedInfo{To ${1:\CUST{}}: ${2:question}}
+endsnippet
+
+snippet be "bulleted enumeration" 
+\BE
+\I ${1:item}
+\EE
+endsnippet
+
+snippet i "enumeration item" 
+\I ${1:item}
+endsnippet
+
+snippet cust "Customer macro" 
+\CUST{}
+endsnippet
+
+snippet product "Product macro" 
+\PRODUCT{}
+endsnippet
+
+snippet hid "Hid macro" 
+\HID{}
+endsnippet
+
+snippet note "doc note" !b
+\NOTE{ ${1:HID}: ${2:content}}
+endsnippet
+
+snippet e "edit" 
+\begin{edit}
+${1:${VISUAL}}
+\end{edit}
+endsnippet
+
+snippet t "An implementation step task" 
+\ComplexTaskDept%
+	{${1:id}}
+	{${2:desc}}
+	{${3:0}}   % dev days
+	{${4:0}}   % qa days
+	{${5:0}}   % sa days
+	{${6:0}} 	 % cust days
+	{${7:0}}   % billable days
+	{$8}       % Tasks this step depends upon
+
+endsnippet
+
+snippet td "Default tasks for a deliverable" 
+\ComplexTaskDept%
+	{${1:id} Discovery}
+	{$1 discovery time. While much discovery is complete durring the solution design writing, there is always some post solution discovery that needs to be accounted for in project estimations.}
+	{0}   % dev days
+	{0}   % qa days
+	{3}   % sa days
+	{3} 	 % cust days
+	{3}   % billable days
+	{\CUSTINITIALS{}, HID} % Who is responsible for task. HID or \CUST{} ?
+	{}       % Tasks this step depends upon
+
+\ComplexTaskDept%
+	{$1 Implementation}
+	{$1 implementation time.}
+	{0}   % dev days
+	{0}   % qa days
+	{3}   % sa days
+	{3} 	 % cust days
+	{2}   % billable days
+	{\CUSTINITIALS{}} % Who is responsible for task. HID or \CUST{} ?
+	{}       % Tasks this step depends upon
+
+\ComplexTaskDept%
+	{$1 Documentation}
+ 	{$1 Documentation time}
+	{0}   % dev days
+	{0}   % qa days
+	{0.5}   % sa days
+	{0} 	 % cust days
+	{0.5}   % billable days
+	{\CUSTINITIALS{}} % Who is responsible for task. HID or \CUST{} ?
+	{$1 Implementation}       % Tasks this step depends upon
+
+\ComplexTaskDept%
+	{$1 Patch Process}
+ 	{$1 Patch Process creation and testing time.}
+	{0}   % dev days
+	{0}   % qa days
+	{0.5}   % sa days
+	{0} 	 % cust days
+	{0}   % billable days
+	{\CUSTINITIALS{}} % Who is responsible for task. HID or \CUST{} ?
+	{$1 Implementation}       % Tasks this step depends upon
+
+\ComplexTaskDept%
+	{$1 Devel Environment Testing} 
+ 	{$1 Time testing in development environment} 
+	{0}   % dev days
+	{0}   % qa days
+	{0.5}   % sa days
+	{0} 	 % cust days
+	{0}   % billable days
+	{\CUSTINITIALS{}} % Who is responsible for task. HID or \CUST{} ?
+	{$1 Patch Process}       % Tasks this step depends upon
+
+\ComplexTaskDept%
+	{$1 UAT Environment Testing} 
+ 	{$1 Time testing in UAT environment} 
+	{0}   % dev days
+	{0}   % qa days
+	{0.5}   % sa days
+	{0} 	 % cust days
+	{0}   % billable days
+	{\CUSTINITIALS{}} % Who is responsible for task. HID or \CUST{} ?
+	{$1 Devel Environment Testing}       % Tasks this step depends upon
+
+endsnippet
+
+snippet tt "Tasks for a deliverable" 
+\ComplexTaskTableStart[${1:name}]
+  ${2:${VISUAL}}
+\ComplexTaskTableEnd{}
+endsnippet
+
+snippet d "Deliverable" 
+\billablefalse
+\DeliverableDetails%
+	{${1:discovery}} % Discovery
+	{${2:implementation}} % Implementation
+	{${3:testing}} % Testing
+	{${4:packaging}} % Packaging
+	{${5:documentation}} % Documentation
+	{${6:dev-testing}} % Devel Testing
+	{${7:uat-testing}} % UAT Testing
+
+\billablefalse
+\DeliverableHours%
+	{${8:deliverable}}%
+	{${9:dev hours}}
+	{${10:qa hours}}
+	{${11:sa hours}}
+	{${12:sa hours}}
+	{$13}
+
+endsnippet
+
+snippet s "Section" !b
+\section{${1:title}}
+endsnippet
+
+snippet ss "Subsection" !b
+\subsection{${1:title}}
+endsnippet
+
+snippet sss "SubSubsection" !b
+\subsubsection{${1:title}}
+endsnippet
+
+snippet ac "Acceptance criteria" !b
+\AcceptanceCriteria
+  {${1:title}}
+  {\BIT
+   \I ${2:step} 
+   \EIT
+  }
+  {\BIT
+   \I ${3:outcome} 
+   \EIT
+  }
+endsnippet

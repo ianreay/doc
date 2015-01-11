@@ -1,0 +1,279 @@
+snippet tc "Test case" !b
+.. include:: substitutions.rst
+
+.. _tc$2:
+
+TC${2:TC_NUMBER} - ${3: title}
+===============================================================================
+
+Summary
+-------------------------------------------------------------------------------
+
+Use case: :ref:\`UC${1:USECASE_NUMBER} <uc$1>\` 
+
+Test case summary
+
+Use Cases
+-------------------------------------------------------------------------------
+
+* :ref:\`UC$1 <uc$1>\` 
+
+Inputs
+-------------------------------------------------------------------------------
+
+What actors or input files are needed and their sample values.
+
+Actors as per :ref:\`UC$1 <uc$1>\`:
+
+* actor1:
+  
+	* Description of actor 1
+
+* Onboarding CSV.
+
+  * Used to describe some bulk onboard of data. 
+
+======== ========== =========
+Server   Subscriber Account   
+======== ========== =========
+server1  sub1       account1  
+server2  sub2       account1  
+======== ========== =========
+
+SCOM Actors:
+
+* Each actor above should have a real scom equivalent if possible so testing this is easily done by anyone in the company.
+
+Preconditions
+-------------------------------------------------------------------------------
+
+What needs to be done before the test can be ran? 
+
+As per :ref:\`UC$1 <uc$1>\`:
+
+#. :ref:\`Install Server <install_server>\`
+
+Test Steps
+-------------------------------------------------------------------------------
+
+As per :ref:\`UC$1 <uc$1>\`:
+
+* B1: REPLACE WITH CONTENTS OF THE PRIMARY FLOW 
+
+	* Test case specific details about step B1
+
+* Ax: REPLACE WITH ANY DEVIATIONS FROM THE PRIMARY FLOW
+
+	* Test case specific details about step Ax.
+
+Expected Results
+-------------------------------------------------------------------------------
+
+The following should hold after this process is complete:
+
+* Result 1
+* Result 2
+
+Ticket References
+-------------------------------------------------------------------------------
+
+Any ticket refernces
+
+endsnippet
+
+snippet ql "QA Traq Link" 
+\`TCA${1:num} <http://qatraq/qatraq/test_cases_view_content.php?latest=1&id=$2>\`_
+endsnippet
+
+snippet tl "Ticket Link" 
+\`${1:ticket} <https://bambam.hitachi-id.com/cgi-bin/tp.pl?ticket=$1>\`_
+endsnippet
+
+snippet uc "Use Case" !b
+.. include:: substitutions.rst
+
+.. _${2:${1/(\w+)|\W+/(?1:\L$0\E:_)/g}}:
+
+.. _uc${3:number}:
+
+${1:title}
+-------------------------------------------------------------------------------
+
+${4:summary}
+
+Source
+-------------------------------------------------------------------------------
+
+* \`${5:ticket} <https://bambam.hitachi-id.com/cgi-bin/tp.pl?ticket=$5>\`_
+
+Extends
+-------------------------------------------------------------------------------
+
+This use case extends:
+
+* ${6:none}
+
+
+Specializes
+-------------------------------------------------------------------------------
+
+This use case is specialized in:
+
+* ${7:none} 
+
+Preconditions
+-------------------------------------------------------------------------------
+
+#. :ref:\`Install Server <install_server>\` - \`TCA15466 <http://qatraq/qatraq/test_cases_view_content.php?id=31918>\`_ 
+
+Flow of Events
+-------------------------------------------------------------------------------
+
+Actors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. ${8:Actor1}
+
+Basic Flow
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* B1: ${9: first item}
+
+Alternate Flows
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* A0: At any time people should be able to quit the onboarding process.
+
+* A1: ${10:Next flow}
+
+Post Conditions
+-------------------------------------------------------------------------------
+
+IDM Suite servers should operate as expected after a password change orchestration of the psadmin account and an OS reboot
+
+
+Special requirements
+-------------------------------------------------------------------------------
+
+The product needs to be installed and operating correctly.
+
+Use-Case Scenarios
+-------------------------------------------------------------------------------
+
+Below are the Use-Case scenarios in scope.
+
+========== ======================================= ======== ======= ======= =======
+Scenarios  Name                                    Flow1    Flow2   Flow3   Flow4
+========== ======================================= ======== ======= ======= =======
+Scenario1  Success                                 Basic    
+Scenario2  Stop                                    Basic    A0
+========== ======================================= ======== ======= ======= =======
+
+Test Cases
+-------------------------------------------------------------------------------
+
+The following test cases have been extracted from the scenarios.
+
+================================================ =================== =====================
+Name                                             Use Case            Test Case 
+================================================ =================== =====================
+Successful Management                            :ref:\`UC$3 <uc$3>\`    :ref:\`TCx <tcx>\`
+Stop Management                                  :ref:\`UC$3 <uc$3>\`    :ref:\`TCx <tcx>\`
+================================================ =================== =====================
+
+Issues
+-------------------------------------------------------------------------------
+
+* A list of test cases that have unresolved issues.
+
+endsnippet
+snippet ^ "^ heading" !b
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+endsnippet
+
+snippet = "= heading" !b
+===============================================================================
+endsnippet
+
+snippet - "- heading" !b
+-------------------------------------------------------------------------------
+endsnippet
+
+snippet el "simple links" 
+\`${1:desc} <${2:url}>\`_
+endsnippet
+
+snippet il "Internal link" 
+:ref:\`${1:desc} <${2:${1/(\w+)|\W+/(?1:\L$0\E:_)/g}}>\`
+endsnippet
+
+snippet inc "Common includes" !b
+.. include:: substitutions.rst
+endsnippet
+
+snippet p "New page" !b
+.. include:: substitutions.rst
+
+.. _${2:${1/(\w+)|\W+/(?1:\L$0\E:_)/g}}:
+
+${1:title}
+===============================================================================
+endsnippet
+
+snippet s "New section" !b
+.. _${2:${1/(\w+)|\W+/(?1:\L$0\E:_)/g}}:
+
+${1:title}
+-------------------------------------------------------------------------------
+endsnippet
+
+snippet ss "New sub-section" !b
+.. _${2:${1/(\w+)|\W+/(?1:\L$0\E:_)/g}}:
+
+${1:title}
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+endsnippet
+
+snippet image "image" !b
+.. image:: _static/${1}.PNG 
+endsnippet
+
+snippet li "Literal Include" !b
+Location: $1
+
+.. literalinclude:: ${1}
+   :language: ${2:python}
+endsnippet
+
+snippet script "Script Include" !b
+Location: script/$1
+
+.. literalinclude:: ../../../script/${1}
+   :language: ${2:python}
+endsnippet
+
+snippet report "Report Include" !b
+Location: script/$1
+
+.. literalinclude:: ../../../report/${1}
+   :language: ${2:python}
+endsnippet
+
+snippet plugin "Plugin Include" !b
+Location: script/$1
+
+.. literalinclude:: ../../../plugin/${1}
+   :language: ${2:python}
+endsnippet
+
+snippet n "note" !b
+.. note:: $1
+endsnippet
+
+snippet term "Terminology reference" 
+:term:\`${1:desc}`
+endsnippet
+
+snippet include "Include" !b
+.. include:: ../../common/source/${1:file}.rst
+endsnippet

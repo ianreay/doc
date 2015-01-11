@@ -1,0 +1,159 @@
+snippet func "jsfunc" !b
+function ${1:name}(${2:args}){
+	${VISUAL}$0
+}
+endsnippet
+
+snippet logi "log info" !b
+console.log("${1:msg}");
+endsnippet
+
+snippet $( "jquery selector" 
+$('${1:select}')
+endsnippet
+
+snippet each "javascript each" b
+$('${1:select}').each(function(${2:args}) {
+	${VISUAL}$0
+});
+endsnippet
+
+snippet each "ruby each" b
+<% ${1:var}.each do |${2:var}|%>
+	${VISUAL}$0
+<% end %>
+endsnippet
+
+snippet a "a href" 
+<a href="${1:url}">${2:title}</a>
+endsnippet
+snippet xi "xml tag" !b
+<${1:name} ${2:id}="${3:val}">
+	${4:content}
+</$1>
+endsnippet
+snippet x "xml tag" !b
+<${1:name}>
+	${2:content}
+</$1>
+endsnippet
+snippet lt "link to" 
+<%= link_to ${1:title}, [${2:path}], method: :get  %>
+endsnippet
+snippet l "line" 
+<% ${VISUAL}${1} %>
+endsnippet
+snippet lo "output line" 
+<%= ${1:content} %>
+endsnippet
+snippet lv "verbatim output line" 
+<%== ${1:content} %>
+endsnippet
+snippet h1 "h1" 
+<h1> 
+	${1:content} 
+</h1>
+endsnippet
+snippet h2 "h2" 
+<h2> 
+	${1:content} 
+</h2>
+endsnippet
+snippet h3 "h3" 
+<h3> 
+	${1:content} 
+</h3>
+endsnippet
+snippet th "th" 
+<th> 
+	${1:content} 
+</th>
+endsnippet
+snippet ul "ul" 
+<ul> 
+	${1:content} 
+</ul>
+endsnippet
+snippet ol "ul" 
+<ol> 
+	${1:content} 
+</ol>
+endsnippet
+snippet li "li" 
+<li> 
+	${1:content} 
+</li>
+endsnippet
+snippet td "td" 
+<td> 
+	${1:content} 
+</td>
+endsnippet
+snippet tr "tr" 
+<tr> 
+	${1:content} 
+</tr>
+endsnippet
+snippet itabletr "item table tr entry" !b
+<tr>
+	<td class="prompt">
+		<span>
+			${1:name}:
+		</span>
+	</td>
+	<td class="required" width="1%">
+		<span>
+			* 
+		</span>
+	</td>
+	<td>
+		<span>
+			<%= ${2:value} %>
+		</span>
+	</td>
+</tr>
+endsnippet
+snippet itable "item table" !b
+<table class="border" cellspacing="0">
+  <tbody>
+    <tr>
+      <td class="prompt">
+        <span>
+          ${1:name}:
+        </span>
+      </td>
+      <td class="required" width="1%">
+        <span>
+          * 
+        </span>
+      </td>
+      <td>
+        <span>
+          <%= ${2:value} %>
+        </span>
+      </td>
+    </tr>
+    <tr class="foot"  >
+      <td  colspan="3"     >
+        <%= link_to 'Edit', edit_product_path(@product) %>
+        <%= link_to 'Destroy', product_path(@product), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <td>
+    </tr>
+  </tbody>
+</table>
+
+endsnippet
+snippet t "table" 
+<table  cellspacing="0" class="border"   >
+	${1:content}
+</table>
+endsnippet
+snippet bl "back link" 
+<%= link_to 'Back', [${1:path}], method: :get %> 
+endsnippet
+snippet sl "show link" 
+<%= link_to 'Show', [${1:path}], method: :get %> 
+endsnippet
+snippet dl "delete link" 
+<%= link_to 'Delete', [${1:path}], method: :delete, data: {confirm: 'Are you sure?'} %> 
+endsnippet

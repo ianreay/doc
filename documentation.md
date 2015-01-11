@@ -19,17 +19,22 @@ I use markdown for any public facing content I generate. This is mostly because 
 Latex
 --------------------------
 
-Latex is used for customer facing documentation since it allows for large
-ecosystems to be built around it that can remove out many repetitive tasks. 
+[Latex](http://www.latex-project.org/) is used for customer facing
+documentation since it allows for large ecosystems to be built around it that
+can remove out many repetitive tasks. 
 
 Pros:
 * Its hugely extensible.
 * Its a defacto standard that all doc tools tend to have a conversion from and to.
+* It generates pdf based documentation very well. 
 
 Cons:
 * Its complex to setup.
 * Requires compilation phases.
 * Broken compiles can be difficult to troubleshoot.
+* Its [syntax](http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/) is complex and has a high degree of markup that can make source code of docs difficult to read.
+
+I primarily use the [MiKTEX](http://miktex.org/) latex compiler.
 
 Sphinx
 --------------------------
@@ -54,8 +59,8 @@ efficiently and accuratly.
 * sss - create a new sub sub section
 * il - internal link
 * el - external link
-* list - list start
-* li - list entry
+* ls - list start
+* le - list entry
 
 I use [ultisnips](https://github.com/SirVer/ultisnips) and the [vim](http://www.vim.org/) text editor to write docs with snippets
 

@@ -1,0 +1,38 @@
+snippet catch "Try catch block" !b
+try:
+		${1:${VISUAL}}
+except ${2:Exception} as err:
+		${3:handler}
+endsnippet
+
+snippet print "Print" 
+print("${1:msg}".format(${2:args}))
+endsnippet
+
+snippet ld "log debug" !b
+log.debug("${1:msg}")
+endsnippet
+
+snippet li "log info" !b
+log.info("${1:msg}")
+endsnippet
+
+snippet le "log error" !b
+log.error("${1:msg}")
+endsnippet
+
+snippet main "main function" !b
+"""${1:summary}"""
+
+
+def main():
+    """Main function."""
+
+
+if __name__ == "__main__":
+    main()
+endsnippet
+
+snippet c "comment" !b
+"""${1:text}"""
+endsnippet
