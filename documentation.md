@@ -23,10 +23,12 @@ Latex is used for customer facing documentation since it allows for large
 ecosystems to be built around it that can remove out many repetitive tasks. 
 
 Pros:
+
 * Its hugely extensible.
 * Its a defacto standard that all doc tools tend to have a conversion from and to.
 
 Cons:
+
 * Its complex to setup.
 * Requires compilation phases.
 * Broken compiles can be difficult to troubleshoot.
@@ -60,6 +62,7 @@ efficiently and accuratly.
 I use [ultisnips](https://github.com/SirVer/ultisnips) and the [vim](http://www.vim.org/) text editor to write docs with snippets
 
 Quick links:
+
 * [Personal vim setup](https://github.com/ianreay/dotfiles)
 * [Personal snippet repository](https://github.com/ianreay/ultisnips)
 
@@ -67,6 +70,7 @@ Screencasts
 --------------------------
 
 For some great screencasts about how to use ultisnips with vim see:
+
 * [Meet ultisnips](http://vimcasts.org/episodes/meet-ultisnips/)
 * [Using python interpolation in ultisnips](http://vimcasts.org/episodes/ultisnips-python-interpolation/)
 * [Using selected text in Ultisnip snippets](http://vimcasts.org/episodes/ultisnips-visual-placeholder/)
