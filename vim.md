@@ -77,8 +77,9 @@ allowing people to control the app while also inputing content using a standard
 set of keys. This naturally leads to a need to develop a certain degree of
 muscle memory for the keyboard command sequences. 
 
-Please see [learning
-vim](https://github.com/ianreay/doc/blob/master/vim-learning.md) for info about
+Please see
+[learning vim](https://github.com/ianreay/doc/blob/master/vim-learning.md) for
+info about
 how to learn vim.
 
 Plugins
